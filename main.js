@@ -17,8 +17,41 @@ const db = getFirestore();
 let lastReactionsCount = { like: 0, love: 0, cheer: 0 };
 let userTriggeredUpdate = false;
 let isFirstLoad = true;
+let isLive = false;
 
-const reactions = onSnapshot(doc(db, "livestreams", "mll2hccPnNBua9PWcE0x"), (doc) => {
+const qSettings = query(doc(db, "livestreams", "mll2hccPnNBua9PWcE0x"));
+
+const settings = onSnapshot(qSettings, (doc) => {
+  if(doc.data().live) {
+    isLive = true;
+    document.getElementById('video_player').innerHTML = `
+      <iframe class='iframe' src="${doc.data().stream}"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+      </iframe>
+    `
+    document.querySelectorAll('.reactions_count').forEach(count => {
+      count.querySelector('.count').style.display = 'block';
+      count.querySelector('.placeholder').style.display = 'none';
+    })
+
+  }
+  else {
+    isLive = false;
+    document.getElementById('video_player').innerHTML = `
+      <img class='iframe' src= "https://firebasestorage.googleapis.com/v0/b/forum-8423f.appspot.com/o/livestream%2Fposter.jpg?alt=media&token=052dca3e-e347-47bb-90a2-d26588ac1adf" />
+    `
+
+    document.querySelectorAll('.reactions_count').forEach(count => {
+      count.querySelector('.count').style.display = 'none';
+      count.querySelector('.placeholder').style.display = 'block';
+
+    })
+  }
+});
+
+const reactions = onSnapshot(doc(db, "livestreams/mll2hccPnNBua9PWcE0x/reactions", "reactionsCounts"), (doc) => {
   const data = doc.data();
 
   Object.keys(data).forEach(key => {
@@ -44,7 +77,6 @@ const reactions = onSnapshot(doc(db, "livestreams", "mll2hccPnNBua9PWcE0x"), (do
 });
 
 const q = query(collection(db, "livestreams/mll2hccPnNBua9PWcE0x/updates"), orderBy("created", "asc"));
-
 const updates = onSnapshot(q, (querySnapshot) => {
   const data = [];
   querySnapshot.docChanges().forEach((change) => {
@@ -104,9 +136,40 @@ const updates = onSnapshot(q, (querySnapshot) => {
 
 });
 
+/* CONTENT HANLDER */
 
+/* VIDEO REACTION COMPONENT */
+document.getElementById('video_reaction_component').innerHTML = `
+  <div id="video_player">
+    <img class='iframe' src= "https://firebasestorage.googleapis.com/v0/b/forum-8423f.appspot.com/o/livestream%2Fposter.jpg?alt=media&token=052dca3e-e347-47bb-90a2-d26588ac1adf" />
+  </div>
+  <div id="reaction_board">
+  <div class='reaction' id="reactions_cheer">
+      <div><span class="reactions_count"><span class="count" id="reactions_cheer_count"></span><span class="placeholder">-</span></span></div>
+      <button name='cheer' class="reaction_button">
+          🥳
+      </button>
+  </div>
+  <div class='reaction' id="reactions_like">
+      <div><span class="reactions_count"><span class="count" id="reactions_like_count"></span><span class="placeholder">-</span></span></div>
+      <button name='like' class="reaction_button">👍</button>
+  </div>
+  <div class='reaction' id="reactions_love">
+      <div><span class="reactions_count"><span class="count" id="reactions_love_count"></span><span class="placeholder">-</span></span></div>
+      <button name='love' class="reaction_button">😍</button>
+  </div>
+  </div>
+`
 
+/* UPDATE LIST COMPONENT */
+document.getElementById('live_update_component').innerHTML = `
+    <div id="live_update_header">Budget 2024 Live Feed<br>Follow here for the latest updates!</div>
+    <div id="live_update_list">
+    </div>
+    <div id="live_update_list_end">Stay tuned here for more updates as they get delivered!</div>
+`
 
+/* EMOJI CLICK HANDLER */
 
 let lastClickTime = 0;
 const debounceInterval = 500; 
@@ -127,13 +190,12 @@ document.querySelectorAll('.reaction_button').forEach(button => {
     userTriggeredUpdate = true; // Set the flag to indicate a user-triggered update
     createAndAnimateEmoji(reaction, true); // Now passing a flag to indicate user-triggered
     
-    const reactionsRef = doc(db, "livestreams", "mll2hccPnNBua9PWcE0x");
+    const reactionsRef = doc(db, "livestreams/mll2hccPnNBua9PWcE0x/reactions", "reactionsCounts");
     updateDoc(reactionsRef, {
       [reaction]: increment(1)
     });
   });
 });
-
 
 function createAndAnimateEmoji(emojiType, isUserTriggered = false) {
   var emojiList = {
@@ -200,6 +262,31 @@ function createAndAnimateEmoji(emojiType, isUserTriggered = false) {
   requestAnimationFrame(animate);
 }
 
+/* EMOJI COUNT ANIMATION HANDLER */
+
+function triggerContentChangedEvent(buttonId) {
+  const event = new CustomEvent('contentchanged');
+  document.getElementById(buttonId).dispatchEvent(event);
+}
+
+// Function to add the animation class and remove it after the animation ends
+function animateButton(button) {
+  button.classList.add('button-animate');
+  button.addEventListener('animationend', () => {
+    button.classList.remove('button-animate');
+  });
+}
+
+// Add an event listener for the 'contentchanged' event for each button
+document.querySelectorAll('.reactions_count').forEach(button => {
+  button.addEventListener('contentchanged', function(e) {
+    animateButton(e.target);
+  });
+});
+
+
+/* LIVE UPDATE CLICK HANDLER */
+
 document.getElementById('live_update_list').addEventListener('click', (event) => {
   
   const target = event.target;
@@ -239,24 +326,3 @@ document.getElementById('live_update_list').addEventListener('click', (event) =>
 
 });
 
-
-// Function to trigger the custom event 'contentchanged' for a specific button
-function triggerContentChangedEvent(buttonId) {
-  const event = new CustomEvent('contentchanged');
-  document.getElementById(buttonId).dispatchEvent(event);
-}
-
-// Function to add the animation class and remove it after the animation ends
-function animateButton(button) {
-  button.classList.add('button-animate');
-  button.addEventListener('animationend', () => {
-    button.classList.remove('button-animate');
-  });
-}
-
-// Add an event listener for the 'contentchanged' event for each button
-document.querySelectorAll('.reactions_count').forEach(button => {
-  button.addEventListener('contentchanged', function(e) {
-    animateButton(e.target);
-  });
-});
