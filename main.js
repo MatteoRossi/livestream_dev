@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (hasBingo) {
-        bingoMessage.style.display = 'block'; // Show "BINGO!" message
+        bingoMessage.style.display = 'flex'; // Show "BINGO!" message
         break; // Stop checking after finding a Bingo
       }
       else{

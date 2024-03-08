@@ -158,7 +158,7 @@
 }
 
 .bingo-message{
-    display:flex;
+    display:none;
     flex-direction: column;
     gap:0.5em;
     background-color: #f9f9f9;
@@ -245,9 +245,9 @@
 
 <body>
     <div id="root">
-        <div id="video_reaction_component">
+        <div style="display:none" id="video_reaction_component">
         </div>
-        <div id="bingo_component">
+        <div style='margin-top: 1em;' id="bingo_component">
             <div id="bingo_export">
                 <div class="bingo-header">Budget 2024 Bingo!</div>
                 <div class="bingo-sheet">
