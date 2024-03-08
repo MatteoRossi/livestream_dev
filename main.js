@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, onSnapshot, updateDoc, increment, collection, query, orderBy} from "firebase/firestore";
+import html2canvas from "html2canvas";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAnA_2p1ef6MlnQ9BB2zE446DNGGy7g0ac",
@@ -76,66 +77,6 @@ const reactions = onSnapshot(doc(db, "livestreams/mll2hccPnNBua9PWcE0x/reactions
   }
 });
 
-const q = query(collection(db, "livestreams/mll2hccPnNBua9PWcE0x/updates"), orderBy("created", "asc"));
-const updates = onSnapshot(q, (querySnapshot) => {
-  const data = [];
-  querySnapshot.docChanges().forEach((change) => {
-      if (change.type === "added") {
-        const liveUpdateList = document.getElementById('live_update_list');
-        const card = document.createElement('div');
-        card.id = change.doc.id;
-        card.className = "live_update_card";
-        card.style = "max-width: min(500px, 90vw); background-color: #f9f9f9; padding: 1em; border-radius: 8px;";
-        card.innerHTML = `
-          <p style="font-size: 14px; font-weight: 400; text-align: left;">${change.doc.data().textEn}</p>
-          <div class="live_update_card_reaction_board" style="display: flex; flex-direction: row; justify-content: space-between;">
-          <div class="live_update_card_reaction_buttons">
-          <button data-id="${change.doc.id}" class="live_update_button" style="border-radius: 8px; border: 1px solid transparent; padding: 0.6em 1.2em; font-size: 0.5em; font-weight: 500; font-family: inherit; background-color: #e5e5e5; cursor: pointer; transition: border-color 0.25s;">${change.doc.data().emojiCount} ${change.doc.data().emoji}</button>
-      </div>
-              <div data-share="${change.doc.data().shareEn}" class="live_update_card_reaction_share">
-              <button data-id="x" class="live_update_button" style="border-radius: 8px; border: 1px solid transparent; padding: 0.6em 1.2em; font-size: 0.5em; font-weight: 500; font-family: inherit; background-color: #e5e5e5; cursor: pointer; transition: border-color 0.25s;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-twitter-x" viewbox="0 0 16 16">
-                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-              </svg>
-            </button>
-            <button data-id="t" class="live_update_button" style="border-radius: 8px; border: 1px solid transparent; padding: 0.6em 1.2em; font-size: 0.5em; font-weight: 500; font-family: inherit; background-color: #e5e5e5; cursor: pointer; transition: border-color 0.25s;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-threads" viewbox="0 0 16 16">
-            <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
-          </svg>
-          </button>
-              <!-- Additional content -->
-          </div>
-        `;
-
-        // Prepend the new card to make it appear at the top of the list
-        liveUpdateList.prepend(card);
-      }
-      if (change.type === "modified") {
-        document.getElementById(change.doc.id).innerHTML = `
-        <p style="font-size: 14px; font-weight: 400; text-align: left;">${change.doc.data().textEn}</p>
-        <div class="live_update_card_reaction_board" style="display: flex; flex-direction: row; justify-content: space-between;">
-            <div class="live_update_card_reaction_buttons">
-                <button data-id="${change.doc.id}" class="live_update_button" style="border-radius: 8px; border: 1px solid transparent; padding: 0.6em 1.2em; font-size: 0.5em; font-weight: 500; font-family: inherit; background-color: #e5e5e5; cursor: pointer; transition: border-color 0.25s;">${change.doc.data().emojiCount} ${change.doc.data().emoji}</button>
-            </div>
-            <div data-share="${change.doc.data().shareEn}" class="live_update_card_reaction_share">
-              <button data-id="x" class="live_update_button" style="border-radius: 8px; border: 1px solid transparent; padding: 0.6em 1.2em; font-size: 0.5em; font-weight: 500; font-family: inherit; background-color: #e5e5e5; cursor: pointer; transition: border-color 0.25s;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-twitter-x" viewbox="0 0 16 16">
-                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-              </svg>
-            </button>
-            <button data-id="t" class="live_update_button" style="border-radius: 8px; border: 1px solid transparent; padding: 0.6em 1.2em; font-size: 0.5em; font-weight: 500; font-family: inherit; background-color: #e5e5e5; cursor: pointer; transition: border-color 0.25s;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-threads" viewbox="0 0 16 16">
-            <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
-          </svg>
-          </button>
-            </div>
-        </div>
-        `
-      }
-    });
-
-});
-
 /* CONTENT HANLDER */
 
 /* VIDEO REACTION COMPONENT */
@@ -159,14 +100,6 @@ document.getElementById('video_reaction_component').innerHTML = `
       <button name='love' class="reaction_button">😍</button>
   </div>
   </div>
-`
-
-/* UPDATE LIST COMPONENT */
-document.getElementById('live_update_component').innerHTML = `
-    <div id="live_update_header">Budget 2024 Live Feed<br>Follow here for the latest updates!</div>
-    <div id="live_update_list">
-    </div>
-    <div id="live_update_list_end">Stay tuned here for more updates as they get delivered!</div>
 `
 
 /* EMOJI CLICK HANDLER */
@@ -258,7 +191,6 @@ function createAndAnimateEmoji(emojiType, isUserTriggered = false) {
     }
 }
 
-
   requestAnimationFrame(animate);
 }
 
@@ -277,52 +209,76 @@ function animateButton(button) {
   });
 }
 
-// Add an event listener for the 'contentchanged' event for each button
-document.querySelectorAll('.reactions_count').forEach(button => {
-  button.addEventListener('contentchanged', function(e) {
-    animateButton(e.target);
+
+/* BINGO SHEET */
+
+const winningCombinations = [
+  ['1', '2', '3'], // First row
+  ['4', '5', '6'], // Second row
+  ['7', '8', '9'], // Third row
+  ['1', '4', '7'], // First column
+  ['2', '5', '8'], // Second column
+  ['3', '6', '9'], // Third column
+  ['1', '5', '9'], // Diagonal from top-left to bottom-right
+  ['3', '5', '7']  // Diagonal from top-right to bottom-left
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.bingo-section');
+  const bingoMessage = document.getElementById('bingo-message');
+
+  sections.forEach(section => {
+    section.addEventListener('click', () => {
+      section.querySelector('.active').classList.toggle('show');
+      checkForBingo();
+    });
   });
-});
 
+  function checkForBingo() {
+    for (let combination of winningCombinations) {
+      const hasBingo = combination.every(sectionId => {
+        return document.querySelector(`[data-section="${sectionId}"]`).querySelector('.active').classList.contains('show');
+      });
 
-/* LIVE UPDATE CLICK HANDLER */
-
-document.getElementById('live_update_list').addEventListener('click', (event) => {
-  
-  const target = event.target;
-  const isReactionButton = target.classList.contains('live_update_button') && target.closest('.live_update_card_reaction_buttons');
-  const isShareButton = target.classList.contains('live_update_button') && target.closest('.live_update_card_reaction_share');
-
-  if (isReactionButton) {
-      const docId = target.closest('.live_update_card').id; // Assuming the closest parent with an ID is the document's container
-      const reactionRef = doc(db, "livestreams/mll2hccPnNBua9PWcE0x/updates", docId);
-      
-      // Increment emojiCount in Firestore
-      updateDoc(reactionRef, {
-          emojiCount: increment(1)
-      }).catch(console.error);
+      if (hasBingo) {
+        bingoMessage.style.display = 'block'; // Show "BINGO!" message
+        break; // Stop checking after finding a Bingo
+      }
+      else{
+        bingoMessage.style.display = 'none';
+      }
+    }
   }
 
-  if(isShareButton) {
-    const shareText = encodeURIComponent(target.closest('.live_update_card_reaction_share').getAttribute('data-share'))
+
+});
+
+document.getElementById('share-sheet-button').addEventListener('click', () => {
+  html2canvas(document.getElementById('bingo_export')).then(function(canvas) {
+    //download the image
+
+    if(navigator.canShare && (navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    )) {
+      var blob = new Blob([canvas.toDataURL()], {type: 'image/png'});
+      var file = new File([blob], 'bingo.png', {type: 'image/png'});
+
+      navigator.share({
+        files: [file],
+        title: 'Bingo Sheet',
+        text: 'Check out my bingo sheet!'
+      })    
+    }
+    else{
+      var link = document.createElement('a');
+      link.download = 'bingo.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    }
     
-    console.log(shareText);
-
-    const sharePlatform =  target.getAttribute('data-id');
-
-    if(sharePlatform === 'x') {
-      //encode the sharetext
-      const shareLink = `https://twitter.com/intent/tweet?text=${shareText}`
-      window.open(shareLink, '_blank');
-      return;
-    }
-    else if(sharePlatform === 't') {
-      const shareLink = `https://threads.net/intent/post?text=${shareText}`
-      window.open(shareLink, '_blank');
-      return;
-    }
-
-  }
-
 });
-
+})

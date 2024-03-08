@@ -1,5 +1,6 @@
 // vite.config.js
 export default {
+    base: '/livestream_dev/dist/',
     build: {
         rollupOptions: {
           output: {
