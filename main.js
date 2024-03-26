@@ -149,7 +149,7 @@ padding:0 0.3em;'>2024</span></span></div>
 </div>
 <div class="bingo-sheet">
     <div class="bingo-section" data-section="1">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(-10)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -210,7 +210,7 @@ padding:0 0.3em;'>2024</span></span></div>
       </svg></div>
       Conservatives boo progress for Canadians.</div>
     <div class="bingo-section" data-section="2">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(0)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -270,7 +270,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>$10-a-day child care</div>
     <div class="bingo-section" data-section="3">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(-30)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -330,7 +330,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Pierre Poilievre misleads Canadians about fixing the budget.</div>
     <div class="bingo-section" data-section="4">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(20)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -390,7 +390,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Liberal Pharmacare mention.</div>
     <div class="bingo-section" data-section="5">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(15)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -450,7 +450,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Add your name to support our progress<a href='liberal.ca' style='color:#d71920; font-weight: 700'> here</a></div>
     <div class="bingo-section" data-section="6">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(5)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -510,7 +510,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>All provinces/territories get a mention.</div>
     <div class="bingo-section" data-section="7">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(-5)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -570,7 +570,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Conservatives don't clap at children getting the dental care they need.</div>
     <div class="bingo-section" data-section="8">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(-15)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -630,7 +630,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Chrystia Freeland say: "You shouldn't have to choose between X and Y"</div>
     <div class="bingo-section" data-section="9">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(10)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -852,7 +852,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("share-sheet-button").addEventListener("click", () => {
-  html2canvas(document.getElementById("bingo_export")).then(function (canvas) {
+  html2canvas(document.getElementById("bingo_export"), { useCORS: true }).then(function (canvas) {
     //download the image
     if (
       navigator.canShare &&

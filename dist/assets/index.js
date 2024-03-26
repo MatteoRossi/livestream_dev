@@ -1941,7 +1941,7 @@ padding:0 0.3em;'>2024</span></span></div>
 </div>
 <div class="bingo-sheet">
     <div class="bingo-section" data-section="1">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(-10)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2002,7 +2002,7 @@ padding:0 0.3em;'>2024</span></span></div>
       </svg></div>
       Conservatives boo progress for Canadians.</div>
     <div class="bingo-section" data-section="2">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(0)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2062,7 +2062,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>$10-a-day child care</div>
     <div class="bingo-section" data-section="3">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(-30)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2122,7 +2122,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Pierre Poilievre misleads Canadians about fixing the budget.</div>
     <div class="bingo-section" data-section="4">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(20)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2182,7 +2182,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Liberal Pharmacare mention.</div>
     <div class="bingo-section" data-section="5">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(15)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2242,7 +2242,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Add your name to support our progress<a href='liberal.ca' style='color:#d71920; font-weight: 700'> here</a></div>
     <div class="bingo-section" data-section="6">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(5)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2302,7 +2302,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>All provinces/territories get a mention.</div>
     <div class="bingo-section" data-section="7">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(-5)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2362,7 +2362,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Conservatives don't clap at children getting the dental care they need.</div>
     <div class="bingo-section" data-section="8">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(-15)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2422,7 +2422,7 @@ padding:0 0.3em;'>2024</span></span></div>
         <path class="cls-2" d="M384.75,257.38c-.1-.53-.27-.79-.42-1.15l.42,1.15Z"/>
       </svg></div>Chrystia Freeland say: "You shouldn't have to choose between X and Y"</div>
     <div class="bingo-section" data-section="9">
-        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400" transform="rotate(10)">
+        <div class="active"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 400 400">
         <defs>
           <style>
             .cls-1 {
@@ -2487,4 +2487,4 @@ padding:0 0.3em;'>2024</span></span></div>
   <h3>You got a BINGO!</h3>
   <a id='share-sheet-button' class="share-button">Share your <b>#BudgetBingo</b> sheet on social!</a>
 </div>
-`;let l3=0;const ig=500;document.querySelectorAll(".reaction_button").forEach(t=>{t.addEventListener("click",()=>{const A=Date.now();if(A-l3<ig){console.log("Too many clicks, try again later.");return}l3=A;const e=t.name;h1=!0,Gl(e,!0);const r=Ki(Ao,"livestreams/mll2hccPnNBua9PWcE0x/reactions","reactionsCounts");_h(r,{[e]:Sh(1)})})});function Gl(t,A=!1){var e={like:"👍",love:"😍",cheer:"🥳"},r=document.createElement("div");if(r.textContent=e[t],r.style.position="absolute",r.style.bottom="0",r.style.left=`${Math.random()*20}%`,r.style.fontSize="24px",document.getElementById("video_component").appendChild(r),A){var n=document.createElement("div");n.textContent="You",n.style.position="absolute",n.style.bottom="-20px",n.style.left="0px",n.style.fontSize="12px",n.style.color="white",n.style.backgroundColor="red",n.style.padding="2px 4px",n.style.borderRadius="4px",n.style.fontFamily="Poppins",r.appendChild(n)}var s=3e3+Math.random()*2e3,i=null;function o(a){i||(i=a);var c=a-i,l=c/s,u;l<.3?u=l*2:u=.6+(l-.3),u<1?(r.style.bottom=`${u*100}%`,requestAnimationFrame(o)):r.remove()}requestAnimationFrame(o)}function u3(t){const A=new CustomEvent("contentchanged");document.getElementById(t).dispatchEvent(A)}const og=[["1","2","3"],["4","5","6"],["7","8","9"],["1","4","7"],["2","5","8"],["3","6","9"],["1","5","9"],["3","5","7"]];document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelectorAll(".bingo-section"),A=document.getElementById("bingo-message");t.forEach(r=>{r.addEventListener("click",()=>{r.querySelector(".active").classList.toggle("show"),e()})});function e(){for(let r of og)if(r.every(s=>document.querySelector(`[data-section="${s}"]`).querySelector(".active").classList.contains("show"))){A.style.display="flex";break}else A.style.display="none"}});document.getElementById("share-sheet-button").addEventListener("click",()=>{tg(document.getElementById("bingo_export")).then(function(t){if(navigator.canShare&&(navigator.userAgent.match(/Android/i)||navigator.userAgent.match(/webOS/i)||navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPad/i)||navigator.userAgent.match(/iPod/i)||navigator.userAgent.match(/BlackBerry/i))){var A=new Blob([t.toDataURL()],{type:"image/png"}),e=new File([A],"bingo.png",{type:"image/png"});navigator.share({files:[e],text:"Check out my #BudgetBingo sheet!"})}else{var r=document.createElement("a");r.download="bingo.png",r.href=t.toDataURL(),r.click()}})});
+`;let l3=0;const ig=500;document.querySelectorAll(".reaction_button").forEach(t=>{t.addEventListener("click",()=>{const A=Date.now();if(A-l3<ig){console.log("Too many clicks, try again later.");return}l3=A;const e=t.name;h1=!0,Gl(e,!0);const r=Ki(Ao,"livestreams/mll2hccPnNBua9PWcE0x/reactions","reactionsCounts");_h(r,{[e]:Sh(1)})})});function Gl(t,A=!1){var e={like:"👍",love:"😍",cheer:"🥳"},r=document.createElement("div");if(r.textContent=e[t],r.style.position="absolute",r.style.bottom="0",r.style.left=`${Math.random()*20}%`,r.style.fontSize="24px",document.getElementById("video_component").appendChild(r),A){var n=document.createElement("div");n.textContent="You",n.style.position="absolute",n.style.bottom="-20px",n.style.left="0px",n.style.fontSize="12px",n.style.color="white",n.style.backgroundColor="red",n.style.padding="2px 4px",n.style.borderRadius="4px",n.style.fontFamily="Poppins",r.appendChild(n)}var s=3e3+Math.random()*2e3,i=null;function o(a){i||(i=a);var c=a-i,l=c/s,u;l<.3?u=l*2:u=.6+(l-.3),u<1?(r.style.bottom=`${u*100}%`,requestAnimationFrame(o)):r.remove()}requestAnimationFrame(o)}function u3(t){const A=new CustomEvent("contentchanged");document.getElementById(t).dispatchEvent(A)}const og=[["1","2","3"],["4","5","6"],["7","8","9"],["1","4","7"],["2","5","8"],["3","6","9"],["1","5","9"],["3","5","7"]];document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelectorAll(".bingo-section"),A=document.getElementById("bingo-message");t.forEach(r=>{r.addEventListener("click",()=>{r.querySelector(".active").classList.toggle("show"),e()})});function e(){for(let r of og)if(r.every(s=>document.querySelector(`[data-section="${s}"]`).querySelector(".active").classList.contains("show"))){A.style.display="flex";break}else A.style.display="none"}});document.getElementById("share-sheet-button").addEventListener("click",()=>{tg(document.getElementById("bingo_export"),{useCORS:!0}).then(function(t){if(navigator.canShare&&(navigator.userAgent.match(/Android/i)||navigator.userAgent.match(/webOS/i)||navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPad/i)||navigator.userAgent.match(/iPod/i)||navigator.userAgent.match(/BlackBerry/i))){var A=new Blob([t.toDataURL()],{type:"image/png"}),e=new File([A],"bingo.png",{type:"image/png"});navigator.share({files:[e],text:"Check out my #BudgetBingo sheet!"})}else{var r=document.createElement("a");r.download="bingo.png",r.href=t.toDataURL(),r.click()}})});
