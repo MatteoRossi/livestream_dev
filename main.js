@@ -79,10 +79,47 @@ const reactions = onSnapshot(doc(db, "livestreams/mll2hccPnNBua9PWcE0x/reactions
 
 /* CONTENT HANLDER */
 
-/* VIDEO REACTION COMPONENT 
+/* VIDEO REACTION COMPONENT */
 document.getElementById('video_reaction_component').innerHTML = `
-  
-`*/
+<div id="video_player">
+<img
+  class="iframe"
+  src="https://firebasestorage.googleapis.com/v0/b/forum-8423f.appspot.com/o/livestream%2Fposter.jpg?alt=media&token=052dca3e-e347-47bb-90a2-d26588ac1adf"
+/>
+</div>
+<div id="reaction_board">
+<p class="reaction_text">Click to react to the speech <span style="font-weight: 900">LIVE</span>!</p>
+<div class="reactions">
+  <div class="reaction" id="reactions_cheer">
+          <div>
+              <span class="reactions_count">
+                  <span class="count" id="reactions_cheer_count"></span>
+                  <span class="placeholder">-</span>
+              </span>
+          </div>
+      <button name="cheer" class="reaction_button">🥳</button>
+  </div>
+  <div class="reaction" id="reactions_like">
+      <div>
+      <span class="reactions_count"
+          ><span class="count" id="reactions_like_count"></span
+          ><span class="placeholder">-</span></span
+      >
+      </div>
+      <button name="like" class="reaction_button">👍</button>
+  </div>
+  <div class="reaction" id="reactions_love">
+      <div>
+      <span class="reactions_count"
+          ><span class="count" id="reactions_love_count"></span
+          ><span class="placeholder">-</span></span
+      >
+      </div>
+      <button name="love" class="reaction_button">😍</button>
+  </div>
+</div>
+</div>
+`
 
 document.getElementById('bingo_component').innerHTML = `
 <div id="bingo_export">
