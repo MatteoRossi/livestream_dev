@@ -31,7 +31,7 @@ const db = getFirestore();
 const livestreamID = "mll2hccPnNBua9PWcE0x"
 //check if url containst /fr/
 
-const lang = "en";
+let lang = "en";
 
 const url = window.location.href;
 if (url.includes("/fr/")) {
