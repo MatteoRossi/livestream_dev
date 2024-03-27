@@ -489,7 +489,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("share-sheet-button").addEventListener("click", () => {
-  html2canvas(document.querySelector("bingo-header"), { useCORS: true }).then(function (canvas) {
+  html2canvas(document.querySelector(".bingo-header"), { useCORS: true }).then(function (canvas) {
     //download the image
     if (
       navigator.canShare &&
