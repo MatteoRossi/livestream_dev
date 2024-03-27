@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 500px;
+  width: min(500px, 93dvw);
   background-color: #272727;
   border-radius: 100px;
   color: #fff;
@@ -30,8 +30,8 @@
   padding: 1em;
   font-style: italic;
   font-weight: 300;
-  font-size: 1em;
   margin-bottom:0;
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
 }
 
 .reaction {
@@ -57,13 +57,13 @@
 
 #video_component {
   position: relative;
-  width: min(560px, 100dvw);
-  height: 315px;
+  width: min(500px, 93dvw);
+  aspect-ratio: 16 / 9;
 }
 
 .iframe {
-  width: min(560px, 100dvw);
-  height: 315px;
+  width: min(500px, 93dvw);
+  aspect-ratio: 16 / 9;
   border: 5px solid white;
   border-radius: 10px;
 }
@@ -102,6 +102,7 @@
   color: black;
   text-align: center;
   font-family: Poppins;
+  font-size: 1.2em;
 }
 
 .bingo-sheet {
@@ -169,5 +170,5 @@
   border-radius: 8px 8px 0 0;
   width: 100%;
   font-family: Poppins;
-  line-height: 0.7;
+  line-height: 0.8;
 }

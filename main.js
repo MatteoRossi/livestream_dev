@@ -138,8 +138,8 @@ const t = {
       "fr": "VOUS avez obtenu un BINGO!",
     },
     "share_button": {
-      "en": "Share your <b>#BudgetBingo</b> sheet on social!",
-      "fr": "Partagez votre <b>#BingoduBudget</b> sur les reseaux sociaux!",
+      "en": "Share your <b>#BudgetBingo</b> on social!",
+      "fr": "Partagez votre <b>#BingoduBudget</b>",
     },
     "s1" : {
       "en": "Conservatives boo progress for Canadians",
